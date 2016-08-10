@@ -7,19 +7,19 @@ Simple sql microservice using Flask
 
 * start the server
 
-´´´
+```
 python server.py
-´´´
+```
 
 The idea is to use a template engine (jinja2) to create SQL statements
 
-* perform GET resquest:
-´´´
+* perform GET request:
+```
 http://127.0.0.1:5000/sql/folder.example1?_authToken=superSecretToken&_assoc=1
-´´´
+```
 
 This will execute this sql
-´´´
+```
 SELECT
   *
 FROM
@@ -28,8 +28,7 @@ FROM
 where
   id = %(id)s
 {% endif %}
-
-´´´
+```
 
 * and with parameters
 http://127.0.0.1:5000/sql/folder.example1?_authToken=superSecretToken&_assoc=1&id=2
